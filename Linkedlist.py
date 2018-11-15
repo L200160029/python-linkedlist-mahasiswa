@@ -29,7 +29,7 @@ def menu():
 			print("Nama : "+data[0])
 			print("Nim  : "+str(data[1]))
 			print("--------------------------")
-			baris++
+			baris = baris+1
 		raw_input()
 		menu()
 	elif pilih == 3:
@@ -41,7 +41,7 @@ def menu():
 			print("Nama : "+data[0])
 			print("Nim  : "+str(data[1]))
 			print("--------------------------")
-			baris++
+			baris = baris+1
 		updt = raw_input("Masukkan data yang akan di update : ")
 		os.system('cls')
 		
