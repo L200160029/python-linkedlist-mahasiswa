@@ -48,15 +48,19 @@ def menu():
 		menu()
 	elif pilih ==4:
 		os.system('cls') 
-		tampil() 
+		tampil()
+		index_delete=-1
 		id_hapus = int(input("Input Nim yang akan di hapus : ")) 
-		for data in dataSiswa: 
-			if data.nim == id_hapus: 
-				dataSiswa.remove(data)
-				print("Data Telah di hapus")
-			else : print("data tidak di temukan") 
-			input("kembali menu utama") 
-			menu()
+		for a in range(0, len(dataSiswa)): 
+			if id_edit == dataSiswa[a].nim:
+						index_update = a
+						break
+		if(index_delete > -1):
+			del dataSiswa[index_delete]
+			print("Data Telah di hapus") 
+		else : print("nim tidak ditemukan")
+		input("kembali menu utama") 
+		menu()
 	elif pilih == 5 :
 		author()
 		input("\n\n kembali menu utama") 
